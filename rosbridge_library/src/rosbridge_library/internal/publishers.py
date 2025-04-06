@@ -105,7 +105,7 @@ class MultiPublisher:
         # without the need of a custom message publisher implementation.
         publisher_qos = QoSProfile(
             depth=queue_size,
-            durability=DurabilityPolicy.TRANSIENT_LOCAL,
+            durability=DurabilityPolicy.VOLATILE,
         )
 
         # For latched clients, no lifespan has to be specified (i.e. latch forever).
